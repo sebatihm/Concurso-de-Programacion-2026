@@ -1,6 +1,4 @@
 services:
-
-services:
   database:
     image: mysql
     environment:
@@ -26,14 +24,10 @@ services:
         ADMIN_PASSWORD: ${ADMIN_PASSWORD}
         ADMIN_EMAIL: ${ADMIN_EMAIL}
         ALLOWED_CORS_URLS: ${ALLOWED_CORS_URLS}
-      volumes:
-        - uploads_data:/app/uploads
       depends_on:
-        sqlserver:
+        database:
           condition: service_healthy
-        sqlserver-init:
-          condition: service_completed_successfully
-
+        
   frontend:
       build:
         context: ./frontend

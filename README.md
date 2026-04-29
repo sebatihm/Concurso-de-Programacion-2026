@@ -1,5 +1,4 @@
-# Sistema de Dictamenes
-
+# Concurso
 ## Tecnologias utilizadas
 Para el desarrollo se utilizo nestJS para manejar una Api rest, y usamos NextJS para nuestro cliente frontend, a su vez usamos
 TypeORM para la conexion con la base de datos y class-validator y class-transformer para la validación y formato de las peticiones
